@@ -12,9 +12,10 @@
 }
 
 .titlecls {
-  margin: 10px;
+  margin-left: 10px;
   font-style: Bold;
   font-size: 2.1 em;
+  padding-left: 15px;
 }
 
 .descCls {
@@ -95,7 +96,7 @@ font-size: 1.1 em;
 
 
 .custom {
-  background-color: #3f4041 !important; /* This sets the background color*/
+  background-color: #444 !important; /* This sets the background color*/
  }
 
 /*Set the background to transparent for ion-item*/
@@ -123,4 +124,66 @@ font-size: 1.1 em;
 .custom p,
 .custom a {
   color: white;  /*Text color for each item, overrides the color property above*/
+}
+
+.wrapper {
+  position: relative;
+}
+
+.iconTrue {
+  position: relative;
+  float: left;
+}
+
+.iconTrue:before {
+  content: "\f3fd";
+    float: left;
+  	font-family: Ionicons;
+  	font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+  	color: green;
+    font-size: 20px;
+    /*margin-right: 20%;*/
+  	/*cursor: pointer;*/
+  	/*cursor: hand;*/
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.iconFalse {
+  position: relative;
+  float: left;
+}
+
+.iconFalse:before {
+  content: "\f36e";
+    float: left;
+  	font-family: Ionicons;
+  	font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+  	color: red;
+    font-size: 20px;
+    /*margin-right: 20%;*/
+  	/*cursor: pointer;*/
+  	/*cursor: hand;*/
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+
+
+
+.wrapper h3 {
+  background-color: light;
+  bottom: 5%;
+  color: white;
+  font-family: Roboto;
+  font-size: 1.25em;
+  left: 0;
+  padding: 0.25em 0.75em;
+  position: absolute;
 }

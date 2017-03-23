@@ -867,6 +867,7 @@
   content: ""; }
 
 .ion-android-cancel:before {
+  color: red;
   content: ""; }
 
 .ion-android-car:before {
@@ -1710,6 +1711,7 @@
   content: ""; }
 
 .ion-ios-checkmark-outline:before {
+  color: green;
   content: ""; }
 
 .ion-ios-circle-filled:before {

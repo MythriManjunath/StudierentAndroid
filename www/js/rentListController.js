@@ -10,6 +10,12 @@ function($scope, $http,$stateParams, $state, $timeout, $ionicFilterBar, rootScop
 
     $scope.filterText = '';
 
+    $scope.filteredItems = ["balcony", "bike_parking", "cable_tv", "direct_bus_to_uni",
+    "electricity_bill_included", "fire_alarm", "garden", "handicap", "heating", "internet", "parking",
+    "pets", "smoking", "washin_machine"];
+    $scope.amenities = [];
+
+
     console.log("Coming to the rentlist controller...");
 
   var backHandler = $scope.$on('onBack', function(event) {
@@ -243,6 +249,11 @@ $scope.makeAcc = function( acc) {
 
 
   localAcc.rent = acc.rent;
+  localAcc.amenities = [];
+
+  for( amen of $scope.filteredItems) {
+    localAcc[amen] =  acc[amen];
+  }
 
   return localAcc;
 

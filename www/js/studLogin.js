@@ -27,7 +27,7 @@ function ($scope, $http, $stateParams, $state, $timeout, ionicFilterBar, $ionicL
         $ionicLoading.hide();
   };
 
-$scope.login = function(){
+/*$scope.login = function(){
   console.log("input values are....", $scope.loginData);
       $scope.show($ionicLoading);
         $ionicAuth.login('basic', $scope.loginData).then(function(){
@@ -38,16 +38,16 @@ $scope.login = function(){
   alert('Error Logging in');
 
 });
-    }
+    }*/
 $scope.register = function() {
     $scope.show($ionicLoading);
      $state.go('register');
 };
 
-/*$scope.login = function() {
+$scope.login = function() {
     $scope.show($ionicLoading);
      $state.go('rentList');
-};*/
+};
 $scope.forgotpassword = function() {
     $scope.show($ionicLoading);
      $state.go('$ionicAuth.passwordResetURL');
