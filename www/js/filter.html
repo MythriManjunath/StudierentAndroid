@@ -1,0 +1,201 @@
+<ion-view view-title="Filter" name="filter-view">
+  <ion-header-bar ng-show="true" class="bar-positive" style="background-color: #558b2f;">
+    <div class="buttons">
+    </div>
+    <div class="buttons">
+      <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()">
+      </button>
+    </div>
+     <h1 class="title">Studierent</h1>
+   </ion-header-bar>
+
+   <ion-side-menus enable-menu-with-back-views="true">
+     <ion-side-menu-content>
+       <!-- <ion-nav-bar class="bar-balanced">
+         <ion-nav-back-button>
+         </ion-nav-back-button>
+             <ion-nav-buttons side="left">
+               <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()">
+               </button>
+             </ion-nav-buttons>
+       </ion-nav-bar> -->
+       <!-- <ion-nav-view name="menuContent">
+       </ion-nav-view> -->
+       <ion-content class="padding">
+         <div>
+           <div class="list list-inset">
+               <label class="item item-input">
+                   <input type="text" placeholder="Street or Zipcode" ng-model="filterdata.zipcode">
+               </label>
+     </div>
+     <label class = "item item-input item-select item-stable">
+        <div class = "input-label">
+           Type
+        </div>
+
+        <select>
+           <option>Flatshare</option>
+           <option >Flat</option>
+           <option>Student Residence</option>
+           <option>House</option>
+        </select>
+     </label>
+     <label class = "item item-input item-select item-stable">
+        <div class = "input-label">
+           Distance
+        </div>
+
+        <select>
+           <option>0 - 2 km / 5 - 10 min walking</option>
+           <option>2 - 5 km / 10 - 30 min walking</option>
+           <option>5+ km / 30+ min walking</option>
+           <option>Direct Bus to University</option>
+        </select>
+     </label>
+
+
+     </div>
+     <ul class="list">
+     <li class="item item-checkbox   checkbox-balanced">
+        Electricity Bill Included
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+
+     <li class="item item-checkbox   checkbox-balanced">
+        Internet
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+
+     <li class="item item-checkbox   checkbox-balanced">
+        Cable TV
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+
+     <li class="item item-checkbox   checkbox-balanced">
+        Washing Machine
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+     <li class="item item-checkbox   checkbox-balanced">
+        Fire Alerm
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+
+     <li class="item item-checkbox   checkbox-balanced">
+        Heating
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+
+     <li class="item item-checkbox   checkbox-balanced">
+        Parking
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+
+     <li class="item item-checkbox   checkbox-balanced">
+        Bike Parking
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+
+     <li class="item item-checkbox   checkbox-balanced">
+        Garden
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+
+     <li class="item item-checkbox   checkbox-balanced">
+        Balcony
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+
+     <li class="item item-checkbox   checkbox-balanced">
+        Smoking Allowed
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+
+     <li class="item item-checkbox   checkbox-balanced">
+       Pets Allowed
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+     </li>
+
+     </ul>
+     <div class="list list-inset">
+               <label class="item item-input">
+                   <input type="text" placeholder="Min rent" ng-model="filterdata.minrent">
+               </label>
+               <label class="item item-input">
+                   <input type="text" placeholder="Max rent" ng-model="filterdata.maxrent">
+               </label>
+           </div>
+
+           <button class="button button-block button-calm" style="background-color: #009900" ng-click="search()">Search</button>
+           <button class="button button-block button-calm" style="background-color: #009900" ng-click="reset()">Reset</button>
+
+       </ion-content>
+     </ion-side-menu-content>
+
+     <ion-side-menu side="left" type="overlay" id="menuContent">
+       <ion-header-bar class="bar-balanced">
+               <h1 class="title">Home</h1>
+             </ion-header-bar>
+         <ion-content padding="false" style="top:0px !important;" class="custom">
+           <div class="spacer" style="width: 268px; height: 18px;"></div>
+           <div class="spacer" style="width: 268px; height: 29px;"></div>
+           <div>
+             <img src="img/studierent_logo.png" style="display :block; width:40%; height: auto; margin-left: auto; margin-right: auto;">
+           </div>
+           <h3 id="menu-heading1" style="font-weight:300;text-align:center;">Mythri</h3>
+           <div class="spacer" style="width: 268px; height: 21px;"></div>
+           <ion-list id="menu-list1">
+             <ion-item nav-clear menu-toggle class="item-icon-left" id="menu-list-item1" ng-click="goToProfile()">
+               <i class="icon ion-android-person"></i>My Profile</ion-item>
+             <!-- <ion-item class="item-icon-left" id="menu-list-item1" ui-sref="profile" menu-close="">
+               <i class="icon ion-android-person"></i>My Profile</ion-item> -->
+               <ion-item nav-clear menu-toggle class="item-icon-left" id="menu-list-item2" ng-click="goToProps()">
+                 <i class="icon ion-ios-home "></i>Properties
+                 <ion-option-button class="button-positive"></ion-option-button></ion-item>
+             <!-- <ion-item class="item-icon-left  side-menu-item" id="menu-list-item2" ui-sref="rentList" menu-close="">
+               <i class="icon ion-ios-home "></i>Properties
+               <ion-option-button class="button-positive"></ion-option-button>
+             </ion-item> -->
+             <ion-item nav-clear menu-toggle class="item-icon-left" id="menu-list-item3" ng-click="goToFilters()">
+               <i class="icon ion-ios-color-filter "></i>Filter
+               <ion-option-button class="button-positive"></ion-option-button></ion-item>
+             <!-- <ion-item class="item-icon-left" id="menu-list-item3" ui-sref="filter" menu-close="">
+               <i class="icon ion-ios-color-filter "></i>Filter
+               <ion-option-button class="button-positive"></ion-option-button>
+             </ion-item> -->
+             <ion-item nav-clear menu-toggle class="item-icon-left" id="menu-list-item4" ng-click="goToFavs()">
+               <i class="icon ion-heart "></i>My favorites</ion-item>
+             <!-- <ion-item class="item-icon-left" id="menu-list-item4" ui-sref="favorites" menu-close="">
+               <i class="icon ion-heart "></i>My favorites</ion-item> -->
+               <ion-item nav-clear menu-toggle class="item-icon-left" id="menu-list-item5" ng-click="logout()">
+                 <i class="icon ion-logout "></i>Logout</ion-item>
+             </ion-list>
+                   <!-- <button id="menu-button1" class="button button-balanced  button-block" ng-click="logout()">Logout</button> -->
+                 </ion-content>
+                   </ion-side-menu>
+                 </ion-side-menus>
+
+  </ion-view>

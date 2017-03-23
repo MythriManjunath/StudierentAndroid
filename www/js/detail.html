@@ -1,0 +1,97 @@
+<ion-view view-title="Property Details" name="detail-view">
+  <ion-header-bar ng-show="true" class="bar-assertive" style="background-color: #558b2f;">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-back"
+                ng-click="backToLogin()"></button>
+    </div>
+     <h1 class="title">Property Details</h1>
+   </ion-header-bar>
+
+   <ion-content class="custom" style=" border-style: solid; border-color: green; border-size: 1px;">
+       <div >
+           <ion-card>
+               <img src="{{acc.image}}" style="width:100%; height: auto; margin-left: auto; margin-right: auto;">
+               <ion-card-content>
+                 <div style=" border-style: solid; border-color: black; border-size: 1px;" class="titleCls">
+                   <h2 class="card-title">
+                      {{acc.title}}
+                   </h2>
+                 </div>
+                 <div style=" border-style: solid; border-color: black; border-size: 1px;" class="descCls">
+                   <p>
+                       {{acc.description}}
+                   </p>
+                   </div>
+               </ion-card-content>
+
+            <div class="list">
+  <div class="item item-icon-left">
+    <div class="item-content">
+    <i class="icon ion-ios-location"></i>
+    {{acc.address}}
+  </div>
+</div>
+<div class="item item-icon-left">
+  <div class="item-content">
+    <i class="icon ion-android-home"></i>
+    {{acc.type}}
+  </div>
+  </div>
+  <div class="item item-icon-left">
+    <div class="item-content">
+    <i class="icon ion-ios-pricetag"></i>
+    {{acc.rent}}€
+  </div>
+  </div>
+  <div class="item item-icon-left" href="#">
+    <i class="icon ion-ios-telephone"></i>
+    {{acc.contact_number}}
+  </div>
+  <!--<div class="item item-icon-left" href="#">
+    <i class="icon ion-email"></i>
+    {{acc.email}}
+  </div>-->
+  <a class="item item-icon-right" href="#">
+    Facilities
+    <i class="icon ion-ios-arrow-right"></i>
+  </a>
+  <a class="item  item-icon-right" href="#">
+    More Details
+    <i class="icon ion-ios-arrow-right"></i>
+  </a>
+  <a class="item  item-icon-right" href="#">
+    Policies
+    <i class="icon ion-ios-arrow-right"></i>
+  </a>
+  <a class="item  item-icon-right" href="#/landlordprofile">
+    Landord Profile
+    <i class="icon ion-ios-arrow-right"></i>
+  </a>
+</div>
+
+               <ion-row no-padding>
+                   <ion-col>
+                       <button class="button button-clear button-light">
+                   </ion-content>
+                           <i class="icon ion-ios-heart"></i>
+                              Favorite
+                       </button>
+                   </ion-col>
+                   <ion-col text-center>
+                       <button class="button button-clear button-light">
+                           <i class="icon ion-thumbsup"></i>
+                           Like
+                       </button>
+                   </ion-col>
+                   <ion-col text-right>
+                       <button class="button button-clear button-light">
+                           <i class="icon ion-android-share-alt"></i>
+                           Share
+                       </button>
+                   </ion-col>
+               </ion-row>
+           </ion-card>
+       </div>
+   </ion-content>
+
+</ion-view>
