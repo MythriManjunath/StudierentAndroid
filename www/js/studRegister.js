@@ -15,7 +15,11 @@ $scope.registerData = { };
   $scope.hide = function(){
         $ionicLoading.hide();
   };
+  $scope.backToLogin = function() {
 
+    $state.go('login');
+
+  }
 
 $scope.register = function(){
       $scope.show($ionicLoading);

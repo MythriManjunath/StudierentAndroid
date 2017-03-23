@@ -1,7 +1,7 @@
-studApp.controller('filterCtrl', ['$scope', '$http','$stateParams', '$state', '$timeout', '$ionicFilterBar', '$ionicLoading', '$ionicSideMenuDelegate',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+studApp.controller('filterCtrl', ['$scope', '$http','$stateParams', '$state', '$timeout', '$ionicFilterBar', '$ionicLoading', '$ionicSideMenuDelegate','$ionicAuth',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $http, $stateParams, $state, $timeout, ionicFilterBar, $ionicLoading, $ionicSideMenuDelegate) {
+function ($scope, $http, $stateParams, $state, $timeout, ionicFilterBar, $ionicLoading, $ionicSideMenuDelegate,$ionicAuth) {
 
 console.log("coming for the filter ctrl..");
 
@@ -41,10 +41,15 @@ console.log("coming for the filter ctrl..");
 
 $scope.backToLogin = function() {
 
-  $state.go('login');
+  $state.go('rentList');
 
 };
 
 
+   $scope.logout = function(){
+        $ionicAuth.logout();
+        $scope.show($ionicLoading);
+        $state.go('login');
+    }
 
 }])

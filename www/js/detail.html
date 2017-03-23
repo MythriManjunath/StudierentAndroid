@@ -1,5 +1,5 @@
 <ion-view view-title="Property Details" name="detail-view">
-  <ion-header-bar ng-show="true" class="bar-assertive" style="background-color: #558b2f;">
+  <ion-header-bar ng-show="true" class="bar-balanced" style="background-color: #558b2f;">
     <div class="buttons">
         <button class="button button-icon ion-ios-arrow-back"
                 ng-click="backToLogin()"></button>
@@ -13,9 +13,9 @@
                <img src="{{acc.image}}" style="width:100%; height: auto; margin-left: auto; margin-right: auto;">
                <ion-card-content>
                  <div style=" border-style: solid; border-color: black; border-size: 1px;" class="titleCls">
-                   <h2 class="card-title">
+                   <h3 class="titleCls">
                       {{acc.title}}
-                   </h2>
+                   </h3>
                  </div>
                  <div style=" border-style: solid; border-color: black; border-size: 1px;" class="descCls">
                    <p>
@@ -47,6 +47,7 @@
     <i class="icon ion-ios-telephone"></i>
     {{acc.contact_number}}
   </div>
+  
   <!--<div class="item item-icon-left" href="#">
     <i class="icon ion-email"></i>
     {{acc.email}}

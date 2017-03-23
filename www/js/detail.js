@@ -8,7 +8,11 @@ function($scope, $http,$stateParams, $state, $timeout, $ionicFilterBar, $rootSco
       console.log("Getting stateParams beforeEnter...", $stateParams.accParam);
       $scope.acc = $stateParams.accParam;
     })
+    $scope.backToLogin = function() {
 
+      $state.go('rentList');
+  
+    }
     console.log("Coming to the detail controller...");
     $scope.backToLogin = function() {
 

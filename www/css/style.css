@@ -12,7 +12,9 @@
 }
 
 .titlecls {
-  margin: 2px;
+  margin: 10px;
+  font-style: Bold;
+  font-size: 2.1 em;
 }
 
 .descCls {

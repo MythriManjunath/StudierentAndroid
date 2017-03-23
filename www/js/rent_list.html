@@ -1,6 +1,6 @@
 <!-- <ion-view> -->
 <ion-view title="Properties">
-  <ion-header-bar ng-show="true" class="bar-positive" style="background-color: #558b2f;">
+  <ion-header-bar ng-show="true" class="bar-balanced" style="background-color: #558b2f;">
     <div class="buttons">
     </div>
     <div class="buttons">
@@ -8,6 +8,10 @@
       </button>
     </div>
      <h1 class="title">Properties</h1>
+     <div class="buttons">
+         <button class="button button-icon ion-android-search"
+                 ng-click="showFilterBar()"></button>
+     </div>
    </ion-header-bar>
    <ion-side-menus enable-menu-with-back-views="true">
      <ion-side-menu-content>

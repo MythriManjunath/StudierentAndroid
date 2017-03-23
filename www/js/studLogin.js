@@ -27,27 +27,27 @@ function ($scope, $http, $stateParams, $state, $timeout, ionicFilterBar, $ionicL
         $ionicLoading.hide();
   };
 
-/*$scope.login = function(){
+$scope.login = function(){
   console.log("input values are....", $scope.loginData);
       $scope.show($ionicLoading);
         $ionicAuth.login('basic', $scope.loginData).then(function(){
           console.log("Coming for the login auth..");
-            $state.go('menu');
+            $state.go('rentList');
             console.log("Going for menu control..");
         }, function(err) {
   alert('Error Logging in');
 
 });
-    }*/
+    }
 $scope.register = function() {
     $scope.show($ionicLoading);
      $state.go('register');
 };
 
-$scope.login = function() {
+/*$scope.login = function() {
     $scope.show($ionicLoading);
      $state.go('rentList');
-};
+};*/
 $scope.forgotpassword = function() {
     $scope.show($ionicLoading);
      $state.go('$ionicAuth.passwordResetURL');

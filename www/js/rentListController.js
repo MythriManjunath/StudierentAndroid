@@ -1,5 +1,5 @@
-studApp.controller('rentListCtrl', ['$scope', '$http','$stateParams', '$state', '$timeout', '$ionicFilterBar', '$rootScope', '$ionicLoading', '$ionicSideMenuDelegate',
-function($scope, $http,$stateParams, $state, $timeout, $ionicFilterBar, rootScope, $ionicLoading, $ionicSideMenuDelegate) {
+studApp.controller('rentListCtrl', ['$scope', '$http','$stateParams', '$state', '$timeout', '$ionicFilterBar', '$rootScope', '$ionicLoading', '$ionicSideMenuDelegate','$ionicAuth',
+function($scope, $http,$stateParams, $state, $timeout, $ionicFilterBar, rootScope, $ionicLoading, $ionicSideMenuDelegate,$ionicAuth) {
 
 
 
@@ -250,6 +250,18 @@ $scope.makeAcc = function( acc) {
 
 };
 
+$scope.showlogout = function() {
+  $ionicLoading.show({
+     template: '<p>"Logging off.."</p><ion-spinner icon="circles" class="spinner-balanced"></ion-spinner>',
+     duration: 2000
+  });
+};
+
+   $scope.logout = function(){
+        $ionicAuth.logout();
+        $scope.showlogout($ionicLoading);
+        $state.go('login');
+    }
 
 
 }]);
